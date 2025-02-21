@@ -1,0 +1,36 @@
+# Create two 3x3 matrices A and B
+A <- matrix(c(2, 4, 3, 1, 5, 7, 6, 8, 9), nrow=3, ncol=3)
+B <- matrix(c(9, 8, 7, 6, 5, 4, 3, 2, 1), nrow=3, ncol=3)
+# Display matrices
+print("Matrix A:")
+print(A)
+print("Matrix B:")
+print(B)
+# a. Add matrices A and B
+sum_matrix <- A + B
+print("Sum of A and B:")
+print(sum_matrix)
+# b. Multiply matrices A and B
+product_matrix <- A %*% B
+print("Product of A and B:")
+print(product_matrix)
+# c. Find the inverse of matrix A
+if (det(A) != 0) {
+ inverse_A <- solve(A)
+ print("Inverse of A:")
+ print(inverse_A)
+} else {
+ print("Matrix A is singular and does not have an inverse.")
+}
+# d. Find the inverse of matrix B
+if (det(B) != 0) {
+ inverse_B <- solve(B)
+ print("Inverse of B:")
+ print(inverse_B)
+} else {
+ print("Matrix B is singular and does not have an inverse.")
+}
+# e. Find the transpose of matrix B
+transpose_B <- t(B)
+print("Transpose of B:")
+print(transpose_B)
